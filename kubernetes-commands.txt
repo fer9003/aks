@@ -1,0 +1,17 @@
+## Aplicar manifiestos que se encuentran en un folder
+kubectl apply -f <carpeta_manifiestos_yaml>
+kubectl apply -f kube-manifest/
+
+## Logs
+kubectl logs -f <nombre_pod>
+
+## Descibir el pod
+kubectl describe pod <nombre_pod>
+
+# Validar los deployments y services
+kubectl get deployments
+kubectl get services
+
+# Eliminar los objetos kubernetes
+kubectl delete -f <carpeta_manifiestos_yaml>
+kubectl delete -f kube-manifest/
