@@ -1,0 +1,15 @@
+# Install Azure cli
+`choco install azure-cli`
+
+# Install kubectl
+`choco install kubernetes-cli`
+
+# Install Azure AKS Cli
+`az aks install-cli`
+
+# Download credentials for cluster 
+`az aks get-credentials --resource-group <resource_group_name> --name <cluster_name>`
+
+# Listar los AKS nodes
+`kubectl get nodes`
+`kubectl get nodes -o wide`
