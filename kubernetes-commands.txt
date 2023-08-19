@@ -8,10 +8,18 @@ kubectl logs -f <nombre_pod>
 ## Descibir el pod
 kubectl describe pod <nombre_pod>
 
-# Validar los deployments y services
+##  Validar los deployments y services
 kubectl get deployments
 kubectl get services
 
-# Eliminar los objetos kubernetes
+## Eliminar los objetos kubernetes
 kubectl delete -f <carpeta_manifiestos_yaml>
 kubectl delete -f kube-manifest/
+
+## Lanzar Pod
+kubectl run my-first-pod --image nginx
+kubectl get pods
+kubectl get pods -o wide
+
+## Eliminar Pod
+kubectl delete pod my-first-pod
