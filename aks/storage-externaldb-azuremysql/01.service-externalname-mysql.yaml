@@ -4,4 +4,4 @@ metadata:
   name: mysql
 spec:
   type: ExternalName
-  externalName: akswebappdb.mysql.database.azure.com # colocar el endpoint de azure database mysql
+  externalName: akswebappdb.mysql.database.azure.com # cambiar por el endpoint de azure database mysql de su instancia DB
