@@ -1,0 +1,7 @@
+az login
+
+az acr login --name <container_registry>
+az acr login --name bancopichinchaec.azurecr.io
+
+docker pull <container_registry>/<repositorio>:tag
+docker pull bancopichinchaec.azurecr.io/gobierno/gba-app-inventory-project:1.0.0-2023.08.25-10.48.50
