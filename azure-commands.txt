@@ -1,3 +1,4 @@
+# PULL DE IMAGEN ALOJADA EN AZURE CONTAINER REGISTRY
 az login
 
 az acr login --name <container_registry>
@@ -5,3 +6,18 @@ az acr login --name bancopichinchaec.azurecr.io
 
 docker pull <container_registry>/<repositorio>:tag
 docker pull bancopichinchaec.azurecr.io/gobierno/gba-app-inventory-project:1.0.0-2023.08.25-10.48.50
+
+# PUSH DE IMAGEN A AZURE CONTAINER REGISTRY
+az login
+# Cambiar los valores por los de su container registry
+export ACR_REGISTRY=acrforaksdemo2.azurecr.io
+export ACR_NAMESPACE=app1
+export ACR_IMAGE_NAME=kube-nginx-acr
+export ACR_IMAGE_TAG=v1
+echo $ACR_REGISTRY, $ACR_NAMESPACE, $ACR_IMAGE_NAME, $ACR_IMAGE_TAG
+
+docker login $ACR_REGISTRY
+
+docker tag kube-nginx-acr:v1  $ACR_REGISTRY/$ACR_NAMESPACE/$ACR_IMAGE_NAME:$ACR_IMAGE_TAG
+
+docker push $ACR_REGISTRY/$ACR_NAMESPACE/$ACR_IMAGE_NAME:$ACR_IMAGE_TAG
